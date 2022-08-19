@@ -8,5 +8,5 @@ MUST DO STEPS!! </br>
 
 IMPORTANT</br>
 
-Before your every git push, do <git pull origin main> </br>
-our branch is main, not master!
+Before your every "git push origin main", do "git pull origin main" first </br>
+our primary branch is main, not master!
