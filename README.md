@@ -1,9 +1,9 @@
 MUST DO STEPS!! </br>
 
-1. After git clone, navigate to BackEnd directory and type <npm i> in the terminal</br>
-2. navigate to the FrontEnd directory, and type <npm i> in the terminal</br>
+1. After git clone, navigate to BackEnd directory and type "npm i" in the terminal</br>
+2. navigate to the FrontEnd directory, and type "npm i" in the terminal</br>
 
-<npm i> is used to install all predefined dependencies from package.json. So that we dont have to install each one of them manually.</br>
+"npm i" is used to install all predefined dependencies from package.json. So that we dont have to install each one of them manually.</br>
 
 
 IMPORTANT</br>
