@@ -1,0 +1,17 @@
+.invalid{
+    color:red;
+    font-size: 14px;
+}
+label{
+    font-weight: bold;
+    color:grey;
+}
+#form-control{
+    color: grey;
+    font-weight: bold;
+}
+
+.card{
+    background: linear-gradient(to right, #87bdd4, #c3cdd0, #3b9cc5);
+    width:400px;
+}
