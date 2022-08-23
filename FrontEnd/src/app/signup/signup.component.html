@@ -1,10 +1,10 @@
 <div class="card mx-auto mt-4" style="width: 480px;" >
     <h4 class="card-header text-center bg-info">SIGN UP</h4>
     <div class="card-body" >
-       <form #signup = ngForm >
+       <form #signup = ngForm>
        <div class="form-group">
           <label>First Name</label>
-          <input type="text" ngModel name="firstName" class="form-control" minlength="3" required pattern="^[a-zA-Z]{3,20}$">
+          <input type="text" [(ngModel)]="user.firstName" name="firstName" class="form-control" minlength="3" required pattern="^[a-zA-Z]{3,20}$" >
           <div *ngIf="signup.controls['firstName']?.['touched'] && signup.controls['firstName']?.['errors']">
             <div *ngIf="signup.controls['firstName']?.['errors']?.['required']" class="invalid">Firstname is required</div>
             <div *ngIf="signup.controls['firstName']?.['errors']?.['minlength']" class="invalid">Firstname should contain atleast 3 characters</div>
@@ -13,7 +13,7 @@
        </div>
        <div class="form-group">
           <label>Last Name</label>
-          <input type="text" ngModel name="lastName" class="form-control"required pattern="^[a-zA-Z]{3,20}$" minlength="1">
+          <input type="text" [(ngModel)]="user.lastName" name="lastName" class="form-control"required pattern="^[a-zA-Z]{3,20}$" minlength="1" >
           <div *ngIf="signup.controls['lastName']?.['touched'] && signup.controls['lastName']?.['errors']">
             <div *ngIf="signup.controls['lastName']?.['errors']?.['required']" class="invalid">Lastname is required</div>
             <div *ngIf="signup.controls['firstName']?.['errors']?.['minlength']" class="invalid">Firstname should contain atleast 1 character</div>
@@ -22,7 +22,7 @@
        </div>
        <div class="form-group">
           <label>Email</label>
-          <input type="email" ngModel name="email" class="form-control" required email>
+          <input type="email" [(ngModel)]="user.email" name="email" class="form-control" required email >
           <div *ngIf="signup.controls['email']?.['touched'] && signup.controls['email']?.['errors']">
             <div *ngIf="signup.controls['email']?.['errors']?.['required']" class="invalid">Email is required</div>
             <div *ngIf="signup.controls['email']?.['errors']?.['email']" class="invalid">Enter valid Email</div>
@@ -30,7 +30,7 @@
         </div>
        <div class="form-group">
           <label>Phone</label>
-          <input type="text" ngModel name="phone" class="form-control" required pattern="^[0-9]{10}">
+          <input type="text" [(ngModel)]="user.phone" name="phone" class="form-control" required pattern="^[0-9]{10}" >
           <div *ngIf="signup.controls['phone']?.['touched'] && signup.controls['phone']?.['errors']">
             <div *ngIf="signup.controls['phone']?.['errors']?.['required']" class="invalid">Phone Number is required</div>
             <div *ngIf="signup.controls['phone']?.['errors']?.['pattern']" class="invalid" disabled="signup.invalid">Enter valid phone number</div>
@@ -40,7 +40,7 @@
         
        <div class="form-group">
         <label for="role">Role</label>
-        <select id="inputRole"  ngModel name="role" class="form-control"  required>
+        <select id="inputRole"  [(ngModel)]="user.role" name="role" class="form-control"  required>
             <option selected value="">Choose...</option>
             <option >Trainer</option>
             <option >Finance Team</option>
@@ -51,13 +51,13 @@
      </div>
     <br>
      <div class="form-group">
-        <div class="radio" style="margin-bottom:15px;" ngModel name="gender" id="form-control">
-            <label>Select Gender</label>
+        <div class="radio" style="margin-bottom:15px;"  id="form-control">
+            <label >Select Gender</label>
             <br>
         <div class="select">
-        <input type="radio" name="radio" value="male">Male
-        <input type="radio" name="radio" value="female">Female
-        <input type="radio" name="radio" value="others">Others
+        <input [(ngModel)]="user.gender"  type="radio" name="radio" value="male">Male
+        <input [(ngModel)]="user.gender"  type="radio" name="radio" value="female">Female
+        <input [(ngModel)]="user.gender"  type="radio" name="radio" value="others">Others
        </div>
       <div class="radio"></div>
   </div>
@@ -65,7 +65,7 @@
 
        <div class="form-group">
           <label>Password</label>
-          <input type="password" ngModel name="password" class="form-control" minlength="8" required>
+          <input type="password" [(ngModel)]="user.password" name="password" class="form-control" minlength="8" required >
           <div *ngIf="signup.controls['password']?.['touched'] && signup.controls['password']?.['errors']">
             <div *ngIf="signup.controls['password']?.['errors']?.['required']" class="invalid">Password is required</div>
             <div *ngIf="signup.controls['password']?.['errors']?.['minlength']" class="invalid">Password should contain atleast 8 characters</div>
