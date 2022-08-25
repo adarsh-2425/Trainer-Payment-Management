@@ -8,9 +8,7 @@ app.use(bodyparser.json());
 
 app.get('/users',function(req,res){
 
-    // res.header is for development mode. no need in live application
-    res.header("Access-Control-Allow-Origin","*") 
-    res.header('Access-Control-Allow-Methods:GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    
     UserData.find()
                 .then(function(users){
                     res.send(users);
