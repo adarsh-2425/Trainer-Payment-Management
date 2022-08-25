@@ -6,6 +6,7 @@ var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
 
+
 app.get('/users',function(req,res){
 
     // res.header is for development mode. no need in live application
@@ -21,9 +22,21 @@ app.get('/users',function(req,res){
 //Routes
 
 app.post("/signup",(req,res)=>{
-
 console.log(req.body)
-})
+
+var user={
+    First_Name : req.body.firstName,
+    Last_Name : req.body.lastName,
+    Email: req.body.email,
+    Mobile_Number : req.body.phone,
+    Gender : req.body.gender,
+    Role : req.body.role,
+    password : req.body.password,
+    }
+    var user=new UserData(user);
+    user.save();
+});
+
 
 
 
