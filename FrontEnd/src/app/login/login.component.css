@@ -17,15 +17,11 @@ label{
     background: linear-gradient(to right, #87bdd4, #c3cdd0, #3b9cc5);
     width:400px;
 }
-.form-group{
-   padding-left: 10%;
-}
-.button{
-    margin-left: 10%;
-}
+
+
 .button:hover{
     background-color: violet;
 }
 .class-body{
-    padding: 10%;
+    padding: 5%;
 }

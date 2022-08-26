@@ -2,13 +2,13 @@
 
 <div class="container" >
 <div class="card mx-auto mt-4" >
-<div class="card-header text-center bg-info">
+<div class="card-header  bg-info">
 
 <br>
 <br>
 <div class="card-header">
 
-    <h3> Login</h3>
+    <h3 style="text-align: center;"> Login</h3>
   
   </div>
   
@@ -18,9 +18,9 @@
     
     <label>Email</label>
     <input type="email"   [(ngModel)]="user.Email" name ="Email" #Email="ngModel" required email>
-    <div *ngIf="userLogin.controls['email']?.['touched'] && userLogin.controls['email']?.['errors']">
-      <div *ngIf="userLogin.controls['email']?.['errors']?.['required']" class="invalid">Email is required</div>
-      <div *ngIf="userLogin.controls['email']?.['errors']?.['email']" class="invalid">Enter valid Email</div>
+    <div *ngIf="userLogin.controls['Email']?.['touched'] && userLogin.controls['Email']?.['errors']">
+      <div *ngIf="userLogin.controls['Email']?.['errors']?.['required']" class="invalid">Email is required</div>
+      <div *ngIf="userLogin.controls['Email']?.['errors']?.['Email']" class="invalid">Enter valid Email</div>
     </div>
 
   </div>
@@ -37,7 +37,7 @@
   </div>
   <br>
     
-    <button type="submit" class="btn btn-primary"  >Confirm Identity</button> 
+    <button type="submit" class="btn btn-primary" [disabled]="userLogin.form.invalid" >Confirm Identity</button> 
   
   </form>
   </div>
