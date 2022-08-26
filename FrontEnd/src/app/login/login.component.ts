@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
             res => {
              {
               localStorage.setItem('token',res.token)
-              this._router.navigate(['/signup'])
+              this._router.navigate(['/home'])
             }
           }
           )
