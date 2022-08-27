@@ -44,23 +44,28 @@ app.post('/login', (req,res) => {
 // {Email: req.body.Email} fetches Email : 4@gmail.com
 // findOne property searches it in db and gives result
   UserData.findOne({Email: req.body.Email}, (error, user)=>{
+    
     if(error) {
       console.log("Error")
+
     } else {
       if(!user){
         res.status(401).send('Invalid email')
+        
       }else
       if(user.password!= req.body.password){
         res.status(401).send('Invalid Password')
+        
       }else
       if(user.Role!= req.body.Role){
+        
         res.status(401).send('Invalid Role') 
+        
+
       }else{
         let payload = { subject: user._id}
-        let role = user.Role;
-        // res.send({role});
         let token = jwt.sign(payload, 'secretKey')
-        res.status(200).send({token, role})
+        res.status(200).send({token})
         
 
       }
