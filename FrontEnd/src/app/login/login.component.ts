@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('token',res.token)
               // route to Admin dashboard
               if('Admin' == res.role){
-                this._router.navigate(['/admindashboard'])
+                this._router.navigate(['/adminhome'])
               }
 
               // route to trainer dashboard

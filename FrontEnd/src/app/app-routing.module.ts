@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+
+
 
 
 const routes: Routes = [
@@ -14,7 +16,8 @@ const routes: Routes = [
   ]},
   {path : 'signup' , component : SignupComponent},
   {path : 'login' , component : LoginComponent},
-  {path : 'admindashboard' , component : AdmindashboardComponent}
+  {path : 'adminhome' , component : AdminhomeComponent}
+
 ]
 
 

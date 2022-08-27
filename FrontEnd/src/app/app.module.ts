@@ -12,7 +12,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
-import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 
 
 
@@ -22,7 +22,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    AdmindashboardComponent
+    AdminhomeComponent
   ],
   imports: [
     BrowserModule,

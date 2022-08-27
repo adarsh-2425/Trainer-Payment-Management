@@ -52,10 +52,12 @@ app.post('/login', (req,res) => {
       if(!user){
         res.status(401).send('Invalid email')
         
+
       }else
       if(user.password!= req.body.password){
         res.status(401).send('Invalid Password')
         
+
       }else
       if(user.Role!= req.body.Role){
         
@@ -64,8 +66,9 @@ app.post('/login', (req,res) => {
 
       }else{
         let payload = { subject: user._id + user.password}
+        let role = user.Role;
         let token = jwt.sign(payload, 'secretKey')
-        res.status(200).send({token})
+        res.status(200).send({token, role})
         
 
       }
