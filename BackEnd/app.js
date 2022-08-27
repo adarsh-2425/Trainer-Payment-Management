@@ -57,8 +57,12 @@ app.post('/login', (req,res) => {
         res.status(401).send('Invalid Role') 
       }else{
         let payload = { subject: user._id}
+        let role = user.Role;
+        // res.send({role});
         let token = jwt.sign(payload, 'secretKey')
-        res.status(200).send({token})
+        res.status(200).send({token, role})
+        
+
       }
 
      

@@ -29,7 +29,7 @@
  
   <div class="form-group">
     <label for="role">Role</label>
-    <select id="floatingSelect" class = "form-select"  [(ngModel)]="user.Role" name="Role" >
+    <select id="floatingSelect" class = "form-select"  [(ngModel)]="user.Role" #Role="ngModel" name="Role" >
         <option>Trainer</option>
         <option >Finance Team</option>
         <option >Admin</option>

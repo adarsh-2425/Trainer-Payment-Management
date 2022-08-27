@@ -12,7 +12,9 @@ export class AuthService {
   getToken() {
     return localStorage.getItem('token');
   }
-  
+  getRole(){
+    return localStorage.getItem('role');
+  }
 
   loginUser(user:any)  
   // above user coming from frontend input

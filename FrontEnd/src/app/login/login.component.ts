@@ -35,10 +35,22 @@ export class LoginComponent implements OnInit {
             res => {
              {
               localStorage.setItem('token',res.token)
-              
+              localStorage.setItem('Role',res.role)
+              // route to Admin dashboard
+              if('Admin' == res.role){
+                this._router.navigate(['/admindashboard'])
+              }
 
+              // route to trainer dashboard
+              else
+              if('Trainer' == res.role){
+                this._router.navigate(['/signup'])
+              }
 
-              this._router.navigate(['/admindashboard'])
+              // route to Finance Team dashboard
+              else{
+                this._router.navigate(['/home'])
+              }
             }
           }
           )
