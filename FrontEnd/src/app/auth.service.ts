@@ -12,6 +12,7 @@ export class AuthService {
   getToken() {
     return localStorage.getItem('token');
   }
+  
 
   loginUser(user:any)  
   // above user coming from frontend input
@@ -21,6 +22,8 @@ export class AuthService {
   return this.http.post <any> ("http://localhost:3000/login",user)  
   // <any> was used to remove error in res.token from ts component
 } 
+
+
 
 loggedIn(){
   return !!localStorage.getItem('token')

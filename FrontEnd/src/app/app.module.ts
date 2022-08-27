@@ -12,6 +12,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 
 
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AdmindashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -52,11 +52,15 @@ app.post('/login', (req,res) => {
       }else
       if(user.password!= req.body.password){
         res.status(401).send('Invalid Password')
+      }else
+      if(user.Role!= req.body.Role){
+        res.status(401).send('Invalid Role') 
       }else{
         let payload = { subject: user._id}
         let token = jwt.sign(payload, 'secretKey')
         res.status(200).send({token})
       }
+
      
     }
   })

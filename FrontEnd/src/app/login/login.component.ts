@@ -10,25 +10,40 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  user:any ={email:[''],
-            password:['']}
+  user:any ={email:'',
+            password:'',
+            roles : ''}
 
-  constructor(private _auth:AuthService,  private _router:Router) { }
+  
+  
+
+  constructor(private _auth:AuthService,  private _router:Router) { 
+    // this.roles = [
+    //   'Admin',
+    //   'Trainer',
+    //   'Finance Team'
+    // ]
+  }
+  
 
   ngOnInit(): void {
   }
 
-        userverify(){
-   
+        userverify(){  
           this._auth.loginUser(this.user)
           .subscribe(
             res => {
              {
               localStorage.setItem('token',res.token)
-              this._router.navigate(['/home'])
+              
+
+
+              this._router.navigate(['/admindashboard'])
             }
           }
           )
+          ;
+          
           console.log('login ts file okay');
           
         }

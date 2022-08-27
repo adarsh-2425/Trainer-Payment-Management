@@ -12,6 +12,9 @@ label{
     color: grey;
     font-weight: bold;
 }
+#floatingSelect:hover{
+ cursor: pointer;
+}
 
 .card{
     background: linear-gradient(to right, #87bdd4, #c3cdd0, #3b9cc5);
