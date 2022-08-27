@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
+import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
 
 
 
@@ -16,7 +18,14 @@ const routes: Routes = [
   ]},
   {path : 'signup' , component : SignupComponent},
   {path : 'login' , component : LoginComponent},
-  {path : 'adminhome' , component : AdminhomeComponent}
+
+  {path : 'adminhome' , component : AdminhomeComponent,
+  children : 
+  [
+  {path : 'admintimesheet' , component : AdmintimesheetComponent},
+  {path :'adminnavbar' , component : AdminnavbarComponent}
+  ]
+}
 
 ]
 

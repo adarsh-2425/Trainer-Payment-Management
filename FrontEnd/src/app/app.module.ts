@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
+import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
 
 
 
@@ -22,7 +24,9 @@ import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    AdminhomeComponent
+    AdminhomeComponent,
+    AdmintimesheetComponent,
+    AdminnavbarComponent
   ],
   imports: [
     BrowserModule,
