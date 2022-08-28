@@ -6,9 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
-
-
-
+import { DashboardComponent } from './trainer/dashboard/dashboard.component';
+import { ProfileComponent } from './trainer/profile/profile.component';
+import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
 
 const routes: Routes = [
   { path: '', 
@@ -25,8 +25,14 @@ const routes: Routes = [
   {path : 'admintimesheet' , component : AdmintimesheetComponent},
   {path :'adminnavbar' , component : AdminnavbarComponent}
   ]
+ },
+ { path :'dashboard',component:DashboardComponent,
+ children:
+ [
+  {path:'profile',component:ProfileComponent},
+  {path:'timesheet',component:TimesheetComponent}
+ ]
 }
-
 ]
 
 
