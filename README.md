@@ -1,3 +1,11 @@
+Credentials for Testing :</br>
+Admin Email : admin@ictkerala.org</br>
+Role : Admin </br>
+Admin Password : 12345678</br>
+
+
+
+
 MUST DO STEPS!! </br>
 
 1. After git clone, navigate to BackEnd directory and type "npm i" in the terminal</br>
