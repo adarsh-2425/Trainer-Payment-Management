@@ -45,9 +45,8 @@ export class LoginComponent implements OnInit {
               }
 
               // route to Finance Team dashboard
-              else
-              {
-                this._router.navigate(['/home'])
+              else{
+                this._router.navigate(['/financehome'])
               }
             
               }

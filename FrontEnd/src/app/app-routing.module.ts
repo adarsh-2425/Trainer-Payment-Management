@@ -6,10 +6,18 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
+
 import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
 import { DashboardComponent } from './trainer/dashboard/dashboard.component';
 import { ProfileComponent } from './trainer/profile/profile.component';
 import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
+
+import { FinancehomeComponent } from './finance/financehome/financehome.component';
+import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
+
+
+
+
 
 
 const routes: Routes = [
@@ -30,6 +38,7 @@ const routes: Routes = [
     {path : 'admintimesheet' , component : AdmintimesheetComponent},
     {path : 'adminprofile' , component : AdminprofileComponent} 
   ]
+
  },
  { path :'dashboard',component:DashboardComponent,
  children:
@@ -37,7 +46,16 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'timesheet',component:TimesheetComponent}
  ]
-}
+},
+
+
+  {path :'financehome', component:FinancehomeComponent,
+  children :
+  [
+    {path:'financenavbar', component : FinancenavbarComponent}
+  ]}
+
+
 ]
 
 

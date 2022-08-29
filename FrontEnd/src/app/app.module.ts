@@ -15,10 +15,16 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
+
 import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
 import { ProfileComponent } from './trainer/profile/profile.component';
 import { DashboardComponent } from './trainer/dashboard/dashboard.component';
 import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
+
+
+
+import { FinancehomeComponent } from './finance/financehome/financehome.component';
+import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
 
 
 
@@ -33,9 +39,15 @@ import { AdminprofileComponent } from './admin/adminprofile/adminprofile.compone
     AdminhomeComponent,
     AdmintimesheetComponent,
     AdminnavbarComponent,
+
     TimesheetComponent,
     ProfileComponent,
     DashboardComponent,
+
+    FinancehomeComponent,
+    FinancenavbarComponent
+    
+,
     AdminprofileComponent
   ],
   imports: [
