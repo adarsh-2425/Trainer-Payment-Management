@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
+import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
 
 
 
@@ -16,14 +17,17 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component : HomeComponent}
   ]},
+  
   {path : 'signup' , component : SignupComponent},
   {path : 'login' , component : LoginComponent},
 
   {path : 'adminhome' , component : AdminhomeComponent,
   children : 
   [
-  {path : 'admintimesheet' , component : AdmintimesheetComponent},
-  {path :'adminnavbar' , component : AdminnavbarComponent}
+    {path : 'admintimesheet' , component : AdmintimesheetComponent},
+    {path :'adminnavbar' , component : AdminnavbarComponent},
+    {path : 'admintimesheet' , component : AdmintimesheetComponent},
+    {path : 'adminprofile' , component : AdminprofileComponent} 
   ]
 }
 

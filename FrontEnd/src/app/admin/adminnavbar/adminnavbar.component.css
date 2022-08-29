@@ -1,3 +1,6 @@
 .nav-item{
     font-weight: bolder;
 }
+.nav-item:hover{
+    color: black;
+}

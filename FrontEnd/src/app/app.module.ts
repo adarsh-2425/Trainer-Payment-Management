@@ -15,6 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
+import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
+
+
 
 
 
@@ -26,7 +29,8 @@ import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component'
     HomeComponent,
     AdminhomeComponent,
     AdmintimesheetComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+    AdminprofileComponent
   ],
   imports: [
     BrowserModule,

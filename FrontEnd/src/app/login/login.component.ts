@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
@@ -12,20 +13,14 @@ export class LoginComponent implements OnInit {
 
   user:any ={email:'',
             password:'',
-            roles : ''}
+            roles : ''};
 
+  message:string = '';
+  messageClass  = 'd-none';
+
+  constructor(private _auth:AuthService,  private _router:Router) {  }
   
   
-
-  constructor(private _auth:AuthService,  private _router:Router) { 
-    // this.roles = [
-    //   'Admin',
-    //   'Trainer',
-    //   'Finance Team'
-    // ]
-  }
-  
-
   ngOnInit(): void {
   }
 
@@ -34,6 +29,7 @@ export class LoginComponent implements OnInit {
           .subscribe(
             res => {
              {
+              
               localStorage.setItem('token',res.token)
               // route to Admin dashboard
               if('Admin' == res.role){
@@ -52,7 +48,7 @@ export class LoginComponent implements OnInit {
               }
             }
           }
-          )
+          );
           ;
           
           console.log('login ts file okay');
