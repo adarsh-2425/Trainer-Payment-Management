@@ -6,17 +6,17 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
-<<<<<<< Updated upstream
+
 import { DashboardComponent } from './trainer/dashboard/dashboard.component';
 import { ProfileComponent } from './trainer/profile/profile.component';
 import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
-=======
+
 import { FinancehomeComponent } from './finance/financehome/financehome.component';
 import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
 
 
 
->>>>>>> Stashed changes
+
 
 const routes: Routes = [
   { path: '', 
@@ -33,7 +33,7 @@ const routes: Routes = [
   {path : 'admintimesheet' , component : AdmintimesheetComponent},
   {path :'adminnavbar' , component : AdminnavbarComponent}
   ]
-<<<<<<< Updated upstream
+
  },
  { path :'dashboard',component:DashboardComponent,
  children:
@@ -41,16 +41,16 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'timesheet',component:TimesheetComponent}
  ]
-}
-=======
 },
+
+
   {path :'financehome', component:FinancehomeComponent,
   children :
   [
     {path:'financenavbar', component : FinancenavbarComponent}
   ]}
 
->>>>>>> Stashed changes
+
 ]
 
 

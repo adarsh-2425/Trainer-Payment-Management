@@ -15,15 +15,15 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
-<<<<<<< Updated upstream
+
 import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
 import { ProfileComponent } from './trainer/profile/profile.component';
 import { DashboardComponent } from './trainer/dashboard/dashboard.component';
-=======
+
 import { FinancehomeComponent } from './finance/financehome/financehome.component';
 import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
 
->>>>>>> Stashed changes
+
 
 
 
@@ -36,15 +36,15 @@ import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.co
     AdminhomeComponent,
     AdmintimesheetComponent,
     AdminnavbarComponent,
-<<<<<<< Updated upstream
+
     TimesheetComponent,
     ProfileComponent,
-    DashboardComponent
-=======
+    DashboardComponent,
+
     FinancehomeComponent,
     FinancenavbarComponent
     
->>>>>>> Stashed changes
+
   ],
   imports: [
     BrowserModule,
