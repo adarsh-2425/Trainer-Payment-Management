@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
               // route to trainer dashboard
               else
               if('Trainer' == res.role){
-                this._router.navigate(['/signup'])
+                this._router.navigate(['/dashboard'])
               }
 
               // route to Finance Team dashboard

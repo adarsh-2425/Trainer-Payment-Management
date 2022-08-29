@@ -6,20 +6,11 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
-<<<<<<< HEAD
 import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
-
-
-
-||||||| 9e8b681
-
-
-
-=======
 import { DashboardComponent } from './trainer/dashboard/dashboard.component';
 import { ProfileComponent } from './trainer/profile/profile.component';
 import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
->>>>>>> b8339e5a7f78f0bcbbc29b9f03271feaa35be61b
+
 
 const routes: Routes = [
   { path: '', 
