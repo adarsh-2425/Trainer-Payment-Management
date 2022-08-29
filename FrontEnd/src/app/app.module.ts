@@ -15,6 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
+import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
+import { ProfileComponent } from './trainer/profile/profile.component';
+import { DashboardComponent } from './trainer/dashboard/dashboard.component';
 import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
 
 
@@ -30,6 +33,9 @@ import { AdminprofileComponent } from './admin/adminprofile/adminprofile.compone
     AdminhomeComponent,
     AdmintimesheetComponent,
     AdminnavbarComponent,
+    TimesheetComponent,
+    ProfileComponent,
+    DashboardComponent,
     AdminprofileComponent
   ],
   imports: [
