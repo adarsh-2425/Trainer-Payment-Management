@@ -56,12 +56,13 @@ app.post('/login', (req,res) => {
       }else
       if(user.password!= req.body.password){
         res.status(401).send('Invalid Password')
+
         
 
       }else
       if(user.Role!= req.body.Role){
-        
-        res.status(401).send('Invalid Role') 
+      res.status(401).send('Invalid Role') 
+
         
 
       }else{

@@ -27,10 +27,12 @@ export class LoginComponent implements OnInit {
         userverify(){  
           this._auth.loginUser(this.user)
           .subscribe(
-            res => {
-             {
+            (res) => {
+              {
               
               localStorage.setItem('token',res.token)
+              
+              
               // route to Admin dashboard
               if('Admin' == res.role){
                 this._router.navigate(['/adminhome'])
@@ -43,15 +45,20 @@ export class LoginComponent implements OnInit {
               }
 
               // route to Finance Team dashboard
-              else{
+              else
+              {
                 this._router.navigate(['/home'])
               }
+            
+              }
             }
-          }
-          );
+          
+          )
           ;
           
           console.log('login ts file okay');
+          
+          
           
         }
 
