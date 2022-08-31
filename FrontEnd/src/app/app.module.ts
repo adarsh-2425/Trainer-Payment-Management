@@ -25,6 +25,8 @@ import { AdminprofileComponent } from './admin/adminprofile/adminprofile.compone
 
 import { FinancehomeComponent } from './finance/financehome/financehome.component';
 import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -48,7 +50,9 @@ import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.co
     FinancenavbarComponent
     
 ,
-    AdminprofileComponent
+    AdminprofileComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
