@@ -18,6 +18,8 @@ app.get('/users',function(req,res){
 });
 
 
+
+
 //Routes
 
 // signUp Route
@@ -42,7 +44,8 @@ app.post('/login', (req,res) => {
   
 //  Userdata is model
 // {Email: req.body.Email} fetches Email : 4@gmail.com
-// findOne property searches it in db and gives result
+// findOne property is from mongoose framework
+// below function checks if entered email in login form is present in DB or not
   UserData.findOne({Email: req.body.Email}, (error, user)=>{
     
     if(error) {
@@ -52,12 +55,9 @@ app.post('/login', (req,res) => {
       if(!user){
         res.status(401).send('Invalid email')
         
-
       }else
       if(user.password!= req.body.password){
         res.status(401).send('Invalid Password')
-
-        
 
       }else
       if(user.Role!= req.body.Role){
@@ -66,10 +66,21 @@ app.post('/login', (req,res) => {
         
 
       }else{
-        let payload = { subject: user._id + user.password}
+
+        // creating payload with the combination of userid and password
+        let payload = { subject: user._id + user.password} 
+
+        // assigning role, email, name to variable let role, let email, let name. The variable is used to send role to frontend console.log
+        
         let role = user.Role;
+        let email = user.Email;
+        let name = user.First_Name + " " +  user.Last_Name;
+
+        // creation of token
         let token = jwt.sign(payload, 'secretKey')
-        res.status(200).send({token, role})
+
+        // sending token, role, email, name  to frontend
+        res.status(200).send({token, role, email, name})
         
 
       }

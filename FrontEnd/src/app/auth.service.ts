@@ -9,6 +9,10 @@ export class AuthService {
 
   constructor(private http:HttpClient) { }
 
+  getName(){
+    return this.http.get('http://localhost:3000//users');
+  }
+
   getToken() {
     return localStorage.getItem('token');
   }

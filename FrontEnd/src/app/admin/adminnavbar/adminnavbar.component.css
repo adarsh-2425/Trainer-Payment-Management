@@ -4,3 +4,6 @@
 .nav-item:hover{
     color: black;
 }
+.press:hover{
+    font-weight: bolder;
+}

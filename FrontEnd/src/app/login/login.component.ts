@@ -30,7 +30,11 @@ export class LoginComponent implements OnInit {
             (res) => {
               {
               
+              // setting token, email, name in the localstorage of frontend
               localStorage.setItem('token',res.token)
+              localStorage.setItem('email',res.email)
+              localStorage.setItem('name',res.name)
+             
               
               
               // route to Admin dashboard
