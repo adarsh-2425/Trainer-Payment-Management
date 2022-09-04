@@ -20,7 +20,8 @@ export class TimesheetComponent implements OnInit {
   //Function to open Dialog box
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent);
-    
+       height :'40%'
+       width : '60%'
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });

@@ -19,5 +19,6 @@ export class DialogComponent implements OnInit {
 
   addtimesheet(){
    console.log(this.timesheet)
+   
   }
 }
