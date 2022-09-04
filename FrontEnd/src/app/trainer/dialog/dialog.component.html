@@ -1,0 +1,63 @@
+<h2 mat-dialog-title class="title">Add Timesheet</h2>
+<form class="forms">
+  <mat-dialog-content>
+    <!-- Name and Email Form -->
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="timesheet.name" name="name" >
+    </div>
+  <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="timesheet.email" name="email" >
+    </div>
+    <!-- Date Form -->
+  <mat-form-field class="date">
+      <label for="exampleInputEmail1">Date</label>
+      <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="timesheet.date" name="date">
+      <mat-datepicker-toggle [for]="myDatepicker" matSuffix></mat-datepicker-toggle> 
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    
+    <!-- Batch Form -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Batch</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="timesheet.batch" name="batch">
+        <option selected>Choose...</option>
+        <option value="1">Fullstack</option>
+        <option value="2">Artificial Intellignce</option>
+        <option value="3">Data Science</option>
+      </select>
+    </div>
+    <!-- Form session type -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Session</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="timesheet.session" name="session">
+        <option selected>Choose...</option>
+        <option value="1">Virtual</option>
+        <option value="2">Physical</option>
+        <option value="3">Hybrid</option>
+      </select>
+    </div>
+    <!-- Form total sessions -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">No of Session</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="timesheet.number" name="number">
+        <option selected>Choose...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="addtimesheet()" [mat-dialog-close]="true" cdkFocusInitial color="primary" >Submit</button>
+</mat-dialog-actions>
+</form>

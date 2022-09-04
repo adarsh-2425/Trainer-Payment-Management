@@ -1,0 +1,16 @@
+.button{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.hh{
+    font-style: normal;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-left: 100px;
+}
+.table{
+    margin: 15px;
+}

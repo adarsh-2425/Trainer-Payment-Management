@@ -15,18 +15,26 @@ import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { AdmintimesheetComponent } from './admin/admintimesheet/admintimesheet.component';
 import { AdminnavbarComponent } from './admin/adminnavbar/adminnavbar.component';
-
 import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
 import { ProfileComponent } from './trainer/profile/profile.component';
 import { DashboardComponent } from './trainer/dashboard/dashboard.component';
 import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
-
-
-
 import { FinancehomeComponent } from './finance/financehome/financehome.component';
 import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { TrainernavbarComponent } from './trainer/trainernavbar/trainernavbar.component';
+import { DialogComponent } from './trainer/dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 
 
@@ -52,13 +60,26 @@ import { FooterComponent } from './footer/footer.component';
 ,
     AdminprofileComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TrainernavbarComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+   
+    
+    
     
   ],
   providers: [AuthGuard, AuthService],
