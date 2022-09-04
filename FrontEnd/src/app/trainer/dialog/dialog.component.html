@@ -13,7 +13,7 @@
     <!-- Date Form -->
   <mat-form-field class="date">
       <label for="exampleInputEmail1">Date</label>
-      <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="timesheet.date" name="date">
+      <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="timesheet.date" name="date" [min]="minDate" [max]="maxDate">
       <mat-datepicker-toggle [for]="myDatepicker" matSuffix></mat-datepicker-toggle> 
       <mat-datepicker #myDatepicker></mat-datepicker>
     </mat-form-field>

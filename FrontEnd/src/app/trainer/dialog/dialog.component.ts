@@ -10,6 +10,8 @@ import { timesheetmodel } from '../timesheet/timesheet';
 export class DialogComponent implements OnInit {
   
   timesheet= new timesheetmodel('','','','','','')
+  minDate = new Date(2022, 8, 1)
+  maxDate = new Date(2022, 8, 30)
   constructor() { }
 
   ngOnInit(): void {
