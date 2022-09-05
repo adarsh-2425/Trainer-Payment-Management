@@ -27,6 +27,13 @@ import { FinancehomeComponent } from './finance/financehome/financehome.componen
 import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
+import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
+import { FinanceupdateComponent } from './finance/financeupdate/financeupdate.component';
+import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.component';
+import { TrainernavbarComponent } from './trainer/trainernavbar/trainernavbar.component';
+import { FinancedashboardComponent } from './finance/financedashboard/financedashboard.component';
 
 
 
@@ -52,7 +59,14 @@ import { FooterComponent } from './footer/footer.component';
 ,
     AdminprofileComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    UpdateProfileComponent,
+    AdminUpdateComponent,
+    AdmindashboardComponent,
+    FinanceupdateComponent,
+    TrainerupdateComponent,
+    TrainernavbarComponent,
+    FinancedashboardComponent
   ],
   imports: [
     BrowserModule,

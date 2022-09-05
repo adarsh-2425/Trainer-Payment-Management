@@ -5,5 +5,6 @@
     color: black;
 }
 .press:hover{
-    font-weight: bolder;
+    color: green;
+    cursor: pointer;
 }

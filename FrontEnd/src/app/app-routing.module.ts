@@ -14,6 +14,11 @@ import { TimesheetComponent } from './trainer/timesheet/timesheet.component';
 
 import { FinancehomeComponent } from './finance/financehome/financehome.component';
 import { FinancenavbarComponent } from './finance/financenavbar/financenavbar.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
+import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
+import { FinanceupdateComponent } from './finance/financeupdate/financeupdate.component';
+import { FinancedashboardComponent } from './finance/financedashboard/financedashboard.component';
 
 
 
@@ -29,6 +34,8 @@ const routes: Routes = [
   
   {path : 'signup' , component : SignupComponent},
   {path : 'login' , component : LoginComponent},
+  {path : 'updateprofile' , component : UpdateProfileComponent},
+
 
   {path : 'adminhome' , component : AdminhomeComponent,
   children : 
@@ -36,7 +43,9 @@ const routes: Routes = [
     {path : 'admintimesheet' , component : AdmintimesheetComponent},
     {path :'adminnavbar' , component : AdminnavbarComponent},
     {path : 'admintimesheet' , component : AdmintimesheetComponent},
-    {path : 'adminprofile' , component : AdminprofileComponent} 
+    {path : 'adminprofile' , component : AdminprofileComponent},
+    {path: 'adminupdate' , component : AdminUpdateComponent},
+    {path : 'admindashboard' , component : AdmindashboardComponent}
   ]
 
  },
@@ -52,7 +61,9 @@ const routes: Routes = [
   {path :'financehome', component:FinancehomeComponent,
   children :
   [
-    {path:'financenavbar', component : FinancenavbarComponent}
+    {path:'financenavbar', component : FinancenavbarComponent},
+    {path : 'financeupdate', component : FinanceupdateComponent},
+    {path : 'financedashboard', component : FinancedashboardComponent}
   ]}
 
 

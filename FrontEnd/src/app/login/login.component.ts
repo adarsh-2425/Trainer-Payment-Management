@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { ObjectId } from 'mongoose';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,15 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  user:any ={email:'',
+  user:any ={
+    userid:'',
+    email:'',
             password:'',
             roles : ''};
 
   message:string = '';
   messageClass  = 'd-none';
+  userId:any;
 
   constructor(private _auth:AuthService,  private _router:Router) {  }
   
@@ -34,6 +38,10 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('token',res.token)
               localStorage.setItem('email',res.email)
               localStorage.setItem('name',res.name)
+              // localStorage.setItem('id',res.id)
+              let userId = res.id;
+
+              localStorage.setItem('userId',userId.toString());
              
               
               

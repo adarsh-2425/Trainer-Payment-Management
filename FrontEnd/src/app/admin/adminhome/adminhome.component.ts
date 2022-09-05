@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminhomeComponent implements OnInit {
 
-
+  
 
   constructor() { }
+ 
+
+  
 
   ngOnInit(): void {
+    
     
   }
 

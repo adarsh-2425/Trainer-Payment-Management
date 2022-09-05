@@ -68,11 +68,12 @@ app.post('/login', (req,res) => {
       }else{
 
         // creating payload with the combination of userid and password
-        let payload = { subject: user._id + user.password} 
+        let payload = { subject: user.email + user.password} 
 
         // assigning role, email, name to variable let role, let email, let name. The variable is used to send role to frontend console.log
         
         let role = user.Role;
+        let id = user._id;
         let email = user.Email;
         let name = user.First_Name + " " +  user.Last_Name;
 
@@ -80,7 +81,7 @@ app.post('/login', (req,res) => {
         let token = jwt.sign(payload, 'secretKey')
 
         // sending token, role, email, name  to frontend
-        res.status(200).send({token, role, email, name})
+        res.status(200).send({token, role, email, name, id})
         
 
       }
@@ -88,6 +89,51 @@ app.post('/login', (req,res) => {
      
     }
   })
+})
+
+
+// // user ID
+app.get('/:id',  (req, res) => {
+    const id = req.params.id; 
+    console.log(id);
+    
+    UserData.findOne({"_id":id})
+    .then((user)=>{
+        res.send(user);
+        console.log('reached server');
+        console.log(user);
+        console.log('past server');
+    });
+})
+
+// Profile info update
+app.put('/updateProfile',(req,res)=>{
+    
+  user = req.body;
+  console.log(user);
+  console.log('past req.body');
+  id=req.body._id,
+  First_Name= user.First_Name,
+  Last_Name = user.Last_Name,
+  Email = user.Email,
+  Mobile_Number = user.Mobile_Number,
+  Gender = user.Gender,
+  Role = user.Role,
+  password = user.password,
+  
+
+ UserData.findByIdAndUpdate({"_id":id},
+                              {$set:{
+                              "First_Name":First_Name,
+                              "Last_Name":Last_Name,
+                              "Email":Email,
+                              "Mobile_Number":Mobile_Number,
+                              "Gender":Gender
+                              
+                              }})
+ .then(function(){
+     res.send();
+ })
 })
 
 
