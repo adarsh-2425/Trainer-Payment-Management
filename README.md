@@ -1,6 +1,6 @@
 Credentials for Testing :</br>
 Admin Email : admin@ictkerala.org</br>
-Role : Admin </br>
+Role : Admin</br>
 Admin Password : 12345678</br>
 Expected result : admin dashboard loads</br>
 
