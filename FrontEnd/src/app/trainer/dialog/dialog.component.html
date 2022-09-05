@@ -19,45 +19,39 @@
     </mat-form-field>
     
     <!-- Batch Form -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">Batch</label>
-      </div>
-      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="timesheet.batch" name="batch">
-        <option selected>Choose...</option>
-        <option value="1">Fullstack</option>
-        <option value="2">Artificial Intellignce</option>
-        <option value="3">Data Science</option>
+    <form class="form2" >
+      <label for="Batch">Batch</label>
+      <select name="languages" id="lang" [(ngModel)]="timesheet.batch" name="batch">
+        <option value="FSD">FSD</option>
+        <option value="Data science">Data science</option>
+        <option value="AI">AI</option>
       </select>
-    </div>
+      
+</form>
     <!-- Form session type -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">Session Type</label>
-      </div>
-      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="timesheet.session" name="session">
-        <option selected>Choose...</option>
-        <option value="1">Virtual Lecture</option>
-        <option value="2">Physical Lecture</option>
-        <option value="3">Lark Q&A</option>
+    <form class="form2">
+      <label for="Session">Session</label>
+      <select name="languages" id="lang" [(ngModel)]="timesheet.session" name="session">
+        <option value="Virtual Session">Virtual Sesion</option>
+        <option value="Physical Session">Physical Session</option>
+        <option value="Lark doubt Session">Lark doubt session</option>
       </select>
-    </div>
+      
+</form>
     <!-- Form total sessions -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">No of Session</label>
-      </div>
-      <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="timesheet.number" name="number">
-        <option selected>Choose...</option>
+    <form class="form2">
+      <label for="no of session">No of Session</label>
+      <select name="languages" id="lang" [(ngModel)]="timesheet.number" name="number">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
       </select>
-    </div>
+      
+</form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button (click)="addtimesheet()" [mat-dialog-close]="true" cdkFocusInitial color="primary" >Submit</button>
+  <button  mat-button (click)="addtimesheet()" [mat-dialog-close]="true" cdkFocusInitial  >Submit</button>
 </mat-dialog-actions>
 </form>
