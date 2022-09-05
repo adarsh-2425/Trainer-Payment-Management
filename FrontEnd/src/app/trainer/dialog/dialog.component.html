@@ -4,11 +4,11 @@
     <!-- Name and Email Form -->
     <div class="form-group">
       <label for="exampleInputEmail1">Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1"  name="name" [(ngModel)]="username" >
+      <input type="email" class="form-control" id="exampleInputEmail1"  name="name" [(ngModel)]="timesheet.name && name" >
     </div>
   <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1"  name="email" [(ngModel)]="useremail">
+      <input type="email" class="form-control" id="exampleInputEmail1"  name="email" [(ngModel)]="timesheet.email && email">
     </div>
     <!-- Date Form -->
   <mat-form-field class="date">

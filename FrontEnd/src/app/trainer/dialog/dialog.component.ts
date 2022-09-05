@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 
+
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
@@ -15,8 +16,8 @@ export class DialogComponent implements OnInit {
   minDate = new Date(2022, 8, 1)
   maxDate = new Date(2022, 8, 30)
  
- username = localStorage.getItem('name')
- useremail =localStorage.getItem('email')
+ name = localStorage.getItem('name')
+ email =localStorage.getItem('email')
   
  
   constructor(private http : HttpClient) { }
