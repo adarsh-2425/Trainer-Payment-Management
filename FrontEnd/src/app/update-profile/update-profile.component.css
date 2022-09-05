@@ -1,0 +1,25 @@
+.container{
+    padding: 5%;
+}
+.card-header{
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    color: blue;
+
+}
+label{
+    font-weight: bold;
+    margin-left: 35%;
+}
+input{
+    margin-left: 35%;
+}
+.update{
+    font-weight: bolder;
+    padding: 15px;
+    background-color: chartreuse;
+}
+.update:hover{
+    background-color: red;
+}

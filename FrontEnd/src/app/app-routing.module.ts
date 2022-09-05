@@ -19,6 +19,8 @@ import { AdminUpdateComponent } from './admin/admin-update/admin-update.componen
 import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
 import { FinanceupdateComponent } from './finance/financeupdate/financeupdate.component';
 import { FinancedashboardComponent } from './finance/financedashboard/financedashboard.component';
+import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.component';
+import { TrainernavbarComponent } from './trainer/trainernavbar/trainernavbar.component';
 
 
 
@@ -53,7 +55,9 @@ const routes: Routes = [
  children:
  [
   {path:'profile',component:ProfileComponent},
-  {path:'timesheet',component:TimesheetComponent}
+  {path:'timesheet',component:TimesheetComponent},
+  {path : 'trainerupdate', component : TrainerupdateComponent},
+  {path : 'trainernavbar',component : TrainernavbarComponent}
  ]
 },
 
