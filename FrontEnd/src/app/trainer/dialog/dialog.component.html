@@ -1,15 +1,29 @@
 <h2 mat-dialog-title class="title">Add Timesheet</h2>
 <form class="forms">
   <mat-dialog-content>
+    <form class="form2" >
+      <label for="Batch">Name</label>
+      <select name="languages" id="lang" [(ngModel)]="timesheet.name" name="batch">
+        <option value={{username}}>{{username}}</option>
+        </select>
+      </form>
+      <!-- Email -->
+      <form class="form2" >
+        <label for="Batch">Email</label>
+        <select name="languages" id="lang" [(ngModel)]="timesheet.email" name="email">
+          <option value={{useremail}}>{{useremail}}</option>
+          </select>
+        </form>
+
     <!-- Name and Email Form -->
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="exampleInputEmail1">Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1"  name="name" [(ngModel)]="timesheet.name && name" >
-    </div>
-  <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1"  name="name" [(ngModel)]="timesheet.name" >
+    </div> -->
+  <!-- <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1"  name="email" [(ngModel)]="timesheet.email && email">
-    </div>
+      <input type="email" class="form-control" id="exampleInputEmail1" value={{useremail}}  name="email" [(ngModel)]="timesheet.email">
+    </div> -->
     <!-- Date Form -->
   <mat-form-field class="date">
       <label for="exampleInputEmail1">Date</label>
@@ -39,15 +53,12 @@
       
 </form>
     <!-- Form total sessions -->
-    <form class="form2">
-      <label for="no of session">No of Session</label>
-      <select name="languages" id="lang" [(ngModel)]="timesheet.number" name="number">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-      
-</form>
+  <form class="form2">
+    <div class="form-group">
+      <label for="Hours">Total Hours</label>
+      <input type="email" class="form-control" id="exampleInputhours"   name="hours" [(ngModel)]="timesheet.number">
+    </div> 
+  </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     

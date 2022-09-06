@@ -4,6 +4,7 @@ const TrainerData = require('./src/model/Trainerdata')
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 var bodyparser=require('body-parser');
+const Trainerdata = require('./src/model/Trainerdata');
 var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
@@ -38,6 +39,7 @@ var user={
     Role : req.body.role,
     password : req.body.password,
     }
+   
     var user=new UserData(user);
     user.save();
 });
@@ -96,7 +98,19 @@ app.post('/login', (req,res) => {
 
 //Add Timesheet
 app.post("/addtimesheet", (req,res)=>{
-  console.log(req.body)
+  
+    var trainer ={
+      Name : req.body.name,
+      Batch : req.body.batch,
+      Date : req.body.date,
+      Email : req.body.email,
+      Program : req.body.session,
+      Sessions : req.body.number
+    }
+  console.log(trainer)
+  var trainer = new Trainerdata(trainer);
+  trainer.save();
+   
 })
 
 
