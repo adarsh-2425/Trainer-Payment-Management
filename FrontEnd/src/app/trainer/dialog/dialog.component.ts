@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { TimesheetService } from 'src/app/timesheet.service';
 
 
+
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
@@ -21,6 +22,7 @@ export class DialogComponent implements OnInit {
 
  username :string = JSON.parse(JSON.stringify(localStorage.getItem('name')))
  useremail: string = JSON.parse(JSON.stringify(localStorage.getItem('email')))
+ 
 
   
  

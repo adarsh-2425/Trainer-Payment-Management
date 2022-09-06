@@ -8,6 +8,7 @@ const Trainerdata = require('./src/model/Trainerdata');
 var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended : true}))
 
 
 app.get('/users',function(req,res){
@@ -120,6 +121,12 @@ app.post("/addtimesheet", (req,res)=>{
   var trainer = new Trainerdata(trainer);
   trainer.save();
    
+})
+
+//Get Timesheet Data
+app.post('/gettimesheet', (req,res)=>{
+  
+  console.log(req.body)
 })
 
 

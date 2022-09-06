@@ -99,7 +99,7 @@ import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.componen
     
     
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [AuthGuard, AuthService,DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

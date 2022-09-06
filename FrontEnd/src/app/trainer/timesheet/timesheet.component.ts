@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { timesheetmodel } from './timesheet';
+import { TimesheetService } from 'src/app/timesheet.service';
 
 
 @Component({
@@ -13,9 +14,13 @@ import { timesheetmodel } from './timesheet';
 export class TimesheetComponent implements OnInit {
   
   timesheet:timesheetmodel[]=[]
-  constructor(private dialog:MatDialog) { }
+  constructor(private dialog:MatDialog, private dialogVariable :DialogComponent,
+    private _timesheet2 : TimesheetService ) { }
 
   ngOnInit(): void {
+   
+  this._timesheet2.getTimesheetData(this.dialogVariable.useremail).subscribe()
+
   }
 
   //Function to open Dialog box
