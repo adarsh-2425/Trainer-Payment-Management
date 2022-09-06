@@ -3,8 +3,6 @@ import { timesheetmodel } from '../timesheet/timesheet';
 import { HttpClient } from '@angular/common/http';
 
 
-
-
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
@@ -16,16 +14,24 @@ export class DialogComponent implements OnInit {
   minDate = new Date(2022, 8, 1)
   maxDate = new Date(2022, 8, 30)
  
+
  name = localStorage.getItem('name')
  email =localStorage.getItem('email')
+
+ username :string = JSON.parse(JSON.stringify(localStorage.getItem('name')))
+ useremail: string = JSON.parse(JSON.stringify(localStorage.getItem('email')))
+
   
  
   constructor(private http : HttpClient) { }
 
   ngOnInit(): void {
+   console.log(this.username)
+   console.log(this.useremail)
   }
 
   addtimesheet(){
+   
    console.log(this.timesheet)
    return this.http.post('http://localhost:3000/addtimesheet',this.timesheet).subscribe()
 
