@@ -1,3 +1,22 @@
-.nav-item{
-    font-weight: bolder;
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    color: violet;
 }
+.c2 {
+    
+    font-weight: 800;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    padding: 5%;
+  }
+  
+  .c2 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+ 

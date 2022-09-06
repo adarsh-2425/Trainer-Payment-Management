@@ -9,7 +9,7 @@ const connectionParams={
 
 mongoose.connect(uri,connectionParams)
   .then( () => {
-      console.log('Connected to the User atlas database ')
+      console.log('Connected to the Trainer Data Schema ')
   })
   .catch( (err) => {
       console.error(`Error connecting to the database. n${err}`);
@@ -31,7 +31,7 @@ var TrainerDataSchema = new Schema({
     
 });
 // creating model
-var Trainerdata = mongoose.model('Trainer', TrainerDataSchema);                        //UserData is the model and NewBookData is the schema
+var Trainerdata = mongoose.model('trainer', TrainerDataSchema);                        //UserData is the model and NewBookData is the schema
 
 // exporting model
 module.exports = Trainerdata;

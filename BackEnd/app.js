@@ -19,6 +19,15 @@ app.get('/users',function(req,res){
                 });
 });
 
+app.get('/timesheet',function(req,res){
+
+    
+  Trainerdata.find()
+              .then(function(trainers){
+                  res.send(trainers);
+              });
+});
+
 
 
 
