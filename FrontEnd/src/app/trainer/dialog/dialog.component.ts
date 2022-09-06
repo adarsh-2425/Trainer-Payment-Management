@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { timesheetmodel } from '../timesheet/timesheet';  
 import { HttpClient } from '@angular/common/http';
+import { TimesheetService } from 'src/app/timesheet.service';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class DialogComponent implements OnInit {
 
   
  
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient, private _timesheet : TimesheetService) { }
 
   ngOnInit(): void {
    console.log(this.username)
@@ -33,7 +34,8 @@ export class DialogComponent implements OnInit {
   addtimesheet(){
    
    console.log(this.timesheet)
-   return this.http.post('http://localhost:3000/addtimesheet',this.timesheet).subscribe()
+   this._timesheet.sendTimesheet(this.timesheet).subscribe();
+   
 
   }
 }
