@@ -42,6 +42,8 @@ import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.c
 import { FinanceupdateComponent } from './finance/financeupdate/financeupdate.component';
 import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.component';
 import { FinancedashboardComponent } from './finance/financedashboard/financedashboard.component';
+import { AdmintrainerlistComponent } from './admin/admintrainerlist/admintrainerlist.component';
+import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
 
 
 
@@ -75,7 +77,9 @@ import { FinancedashboardComponent } from './finance/financedashboard/financedas
     AdmindashboardComponent,
     FinanceupdateComponent,
     TrainerupdateComponent,
-    FinancedashboardComponent
+    FinancedashboardComponent,
+    AdmintrainerlistComponent,
+    TrainerhomeComponent
   ],
   imports: [
     BrowserModule,

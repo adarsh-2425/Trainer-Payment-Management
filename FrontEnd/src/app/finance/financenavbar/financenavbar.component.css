@@ -1,0 +1,10 @@
+.nav-item{
+    font-weight: bolder;
+}
+.nav-item:hover{
+    color: black;
+}
+.press:hover{
+    color: green;
+    cursor: pointer;
+}

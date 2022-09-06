@@ -47,18 +47,18 @@ export class LoginComponent implements OnInit {
               
               // route to Admin dashboard
               if('Admin' == res.role){
-                this._router.navigate(['/adminhome'])
+                this._router.navigate(['/adminhome/admindashboard'])
               }
 
               // route to trainer dashboard
               else
               if('Trainer' == res.role){
-                this._router.navigate(['/dashboard'])
+                this._router.navigate(['/trainerhome/dashboard/'])
               }
 
               // route to Finance Team dashboard
               else{
-                this._router.navigate(['/financehome'])
+                this._router.navigate(['/financehome/financedashboard'])
               }
             
               }

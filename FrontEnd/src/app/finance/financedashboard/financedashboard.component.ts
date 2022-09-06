@@ -9,6 +9,8 @@ export class FinancedashboardComponent implements OnInit {
 
   constructor() { }
 
+  name: string = localStorage.getItem("name")!;
+
   ngOnInit(): void {
   }
 

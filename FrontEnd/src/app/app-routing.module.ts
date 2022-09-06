@@ -21,6 +21,7 @@ import { FinanceupdateComponent } from './finance/financeupdate/financeupdate.co
 import { FinancedashboardComponent } from './finance/financedashboard/financedashboard.component';
 import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.component';
 import { TrainernavbarComponent } from './trainer/trainernavbar/trainernavbar.component';
+import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
 
 
 
@@ -39,7 +40,7 @@ const routes: Routes = [
   {path : 'updateprofile' , component : UpdateProfileComponent},
 
 
-  {path : 'adminhome' , component : AdminhomeComponent,
+  {path : 'adminhome' ,   component : AdminhomeComponent,
   children : 
   [
     {path : 'admintimesheet' , component : AdmintimesheetComponent},
@@ -51,13 +52,14 @@ const routes: Routes = [
   ]
 
  },
- { path :'dashboard',component:DashboardComponent,
+ { path :'trainerhome',component:TrainerhomeComponent,
  children:
  [
   {path:'profile',component:ProfileComponent},
   {path:'timesheet',component:TimesheetComponent},
   {path : 'trainerupdate', component : TrainerupdateComponent},
-  {path : 'trainernavbar',component : TrainernavbarComponent}
+  {path : 'trainernavbar',component : TrainernavbarComponent},
+  {path : 'dashboard' , component : DashboardComponent }
  ]
 },
 
