@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserModel } from './update-profile/user.model';
 
 
 @Injectable({
@@ -16,6 +17,8 @@ export class TimesheetService {
   
   getTimesheetData(data:any){
     console.log(data)
-    return this.http.post("http://localhost:3000/gettimesheet", data)
+    return this.http.post<any>("http://localhost:3000/gettimesheet", data)
   }
+
+  
 }

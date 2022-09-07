@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
-import { timesheetmodel } from './timesheet';
 import { TimesheetService } from 'src/app/timesheet.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -13,13 +13,20 @@ import { TimesheetService } from 'src/app/timesheet.service';
 
 export class TimesheetComponent implements OnInit {
   
-  timesheet:timesheetmodel[]=[]
-  constructor(private dialog:MatDialog, private dialogVariable :DialogComponent,
-    private _timesheet2 : TimesheetService ) { }
+  
+  userData:any=[]
+  constructor(private dialog:MatDialog, private _timesheet : TimesheetService, private http : HttpClient ) { }
 
   ngOnInit(): void {
-   
-  this._timesheet2.getTimesheetData(this.dialogVariable.useremail).subscribe()
+   var useremail ={
+    email :localStorage.getItem('email')
+   }
+
+//Fetch Trainer Data
+  this._timesheet.getTimesheetData(useremail).subscribe((data:any)=>{
+    console.log(data)
+   this.userData=data 
+  })
 
   }
 
@@ -31,5 +38,13 @@ export class TimesheetComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  //Delete timesheet
+  deleteTimesheet(user:any){
+    console.log(user._id)
+   return this.http.delete<any>("http://localhost:3000/deletetimesheet/"+user._id).subscribe()
+   this._timesheet.getTimesheetData
+   
   }
 }

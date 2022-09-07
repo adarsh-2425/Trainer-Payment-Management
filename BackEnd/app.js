@@ -117,7 +117,7 @@ app.post("/addtimesheet", (req,res)=>{
       Program : req.body.session,
       Sessions : req.body.number
     }
-  console.log(trainer)
+  
   var trainer = new Trainerdata(trainer);
   trainer.save();
    
@@ -126,7 +126,23 @@ app.post("/addtimesheet", (req,res)=>{
 //Get Timesheet Data
 app.post('/gettimesheet', (req,res)=>{
   
-  console.log(req.body)
+ email = req.body.email
+
+ Trainerdata.find({Email : email}).then((data)=>{
+  res.send(data)
+ })
+ 
+})
+
+//Delete Timesheet at Trainer side
+app.delete('/deletetimesheet/:id', (req,res)=>{
+  id = req.params.id;
+  console.log(id)
+	Trainerdata.findByIdAndDelete({"_id":id})
+	.then(()=>{
+		console.log('delete success')
+		res.send();
+	})
 })
 
 
