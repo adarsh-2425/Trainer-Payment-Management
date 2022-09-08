@@ -4,7 +4,6 @@ const TrainerData = require('./src/model/Trainerdata')
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 var bodyparser=require('body-parser');
-const Trainerdata = require('./src/model/Trainerdata');
 var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
@@ -23,7 +22,7 @@ app.get('/users',function(req,res){
 app.get('/timesheet',function(req,res){
 
     
-  Trainerdata.find()
+  TrainerData.find()
               .then(function(trainers){
                   res.send(trainers);
               });
@@ -106,6 +105,19 @@ app.post('/login', (req,res) => {
   })
 })
 
+app.get('/:email',  (req, res) => {
+  const email = req.params.email; 
+  console.log(email);
+  
+  TrainerData.findOne({"Email":email})
+  .then((trainer)=>{
+      res.send(trainer);
+      console.log('reached server');
+      console.log(trainer);
+      console.log('past server');
+  });
+})
+
 //Add Timesheet
 app.post("/addtimesheet", (req,res)=>{
   
@@ -143,6 +155,10 @@ app.get('/:id',  (req, res) => {
         console.log('past server');
     });
 })
+
+
+
+
 
 // Profile info update
 app.put('/updateProfile',(req,res)=>{

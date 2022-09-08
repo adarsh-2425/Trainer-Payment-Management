@@ -13,13 +13,16 @@ import { TimesheetService } from 'src/app/timesheet.service';
 
 export class TimesheetComponent implements OnInit {
   
+  pageTitle: string = 'Timesheet';
   timesheet:timesheetmodel[]=[]
+  
+
+
+  
   constructor(private dialog:MatDialog, private dialogVariable :DialogComponent,
     private _timesheet2 : TimesheetService ) { }
 
   ngOnInit(): void {
-   
-  this._timesheet2.getTimesheetData(this.dialogVariable.useremail).subscribe()
 
   }
 
