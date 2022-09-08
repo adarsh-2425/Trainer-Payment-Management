@@ -105,18 +105,7 @@ app.post('/login', (req,res) => {
   })
 })
 
-app.get('/:email',  (req, res) => {
-  const email = req.params.email; 
-  console.log(email);
-  
-  TrainerData.findOne({"Email":email})
-  .then((trainer)=>{
-      res.send(trainer);
-      console.log('reached server');
-      console.log(trainer);
-      console.log('past server');
-  });
-})
+
 
 //Add Timesheet
 app.post("/addtimesheet", (req,res)=>{
