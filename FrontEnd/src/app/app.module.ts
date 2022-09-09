@@ -45,6 +45,7 @@ import { FinancedashboardComponent } from './finance/financedashboard/financedas
 import { AdmintrainerlistComponent } from './admin/admintrainerlist/admintrainerlist.component';
 import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
 import { PaypackageComponent } from './admin/paypackage/paypackage.component';
+import { PaymentComponent } from './admin/payment/payment.component';
 
 
 
@@ -81,7 +82,8 @@ import { PaypackageComponent } from './admin/paypackage/paypackage.component';
     FinancedashboardComponent,
     AdmintrainerlistComponent,
     TrainerhomeComponent,
-    PaypackageComponent
+    PaypackageComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
