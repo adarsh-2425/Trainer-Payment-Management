@@ -1,6 +1,7 @@
 const express = require('express');
 const UserData = require('./src/model/userData.js')
 const TrainerData = require('./src/model/Trainerdata')
+const PaypackageData = require('./src/model/paypackageData');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 var bodyparser=require('body-parser');
@@ -29,8 +30,14 @@ app.get('/timesheet',function(req,res){
               });
 });
 
+app.get('/paypackages',function(req,res){
 
-
+    
+  PaypackageData.find()
+              .then(function(paypackages){
+                  res.send(paypackages);
+              });
+});
 
 
 

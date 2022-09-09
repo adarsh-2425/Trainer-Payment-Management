@@ -22,6 +22,7 @@ import { FinancedashboardComponent } from './finance/financedashboard/financedas
 import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.component';
 import { TrainernavbarComponent } from './trainer/trainernavbar/trainernavbar.component';
 import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
+import { PaypackageComponent } from './admin/paypackage/paypackage.component';
 
 
 
@@ -48,7 +49,8 @@ const routes: Routes = [
     {path : 'admintimesheet' , component : AdmintimesheetComponent},
     {path : 'adminprofile' , component : AdminprofileComponent},
     {path: 'adminupdate' , component : AdminUpdateComponent},
-    {path : 'admindashboard' , component : AdmindashboardComponent}
+    {path : 'admindashboard' , component : AdmindashboardComponent},
+    {path : 'paypackage' , component : PaypackageComponent}
   ]
 
  },

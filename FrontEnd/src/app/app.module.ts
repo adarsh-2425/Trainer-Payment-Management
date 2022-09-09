@@ -44,6 +44,7 @@ import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.co
 import { FinancedashboardComponent } from './finance/financedashboard/financedashboard.component';
 import { AdmintrainerlistComponent } from './admin/admintrainerlist/admintrainerlist.component';
 import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
+import { PaypackageComponent } from './admin/paypackage/paypackage.component';
 
 
 
@@ -79,7 +80,8 @@ import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.componen
     TrainerupdateComponent,
     FinancedashboardComponent,
     AdmintrainerlistComponent,
-    TrainerhomeComponent
+    TrainerhomeComponent,
+    PaypackageComponent
   ],
   imports: [
     BrowserModule,
