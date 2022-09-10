@@ -3,6 +3,8 @@ import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { TimesheetService } from 'src/app/timesheet.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,7 +17,9 @@ export class TimesheetComponent implements OnInit {
   
   
   userData:any=[]
-  constructor(private dialog:MatDialog, private _timesheet : TimesheetService, private http : HttpClient ) { }
+  constructor(private dialog:MatDialog, private _timesheet : TimesheetService, 
+    private http : HttpClient,  private router :Router,
+    private route :ActivatedRoute ) { }
 
   ngOnInit(): void {
    var useremail ={
@@ -43,8 +47,16 @@ export class TimesheetComponent implements OnInit {
   //Delete timesheet
   deleteTimesheet(user:any){
     console.log(user._id)
-   return this.http.delete<any>("http://localhost:3000/deletetimesheet/"+user._id).subscribe()
-   this._timesheet.getTimesheetData
+   this.http.delete<any>("http://localhost:3000/deletetimesheet/"+user._id).subscribe(()=>{
+    alert("Timesheet Deleted");
+    window.location.reload()
+   }
+    
+   )
+    
+   
+   
+   
    
   }
 }

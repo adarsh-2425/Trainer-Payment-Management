@@ -1,68 +1,57 @@
-<h2 mat-dialog-title class="title">Add Timesheet</h2>
-<form class="forms">
+<h2 mat-dialog-title class="title" style="color:yellow ;">Add Timesheet</h2>
+<form class="forms" #userdialog="ngForm">
   <mat-dialog-content>
-    <form class="form2" >
-      <label for="Batch">Name</label>
-      <select name="languages" id="lang" [(ngModel)]="timesheet.name" name="batch">
+    <!-- Name Dropdown -->
+   <div class="form2">
+    <label for="Batch">Name</label>
+      <select name="languages" id="lang" [(ngModel)]="timesheet.name" name="batch" required #trainername="ngModel" [class.is-invalid]="trainername.invalid">
         <option value={{username}}>{{username}}</option>
-        </select>
-      </form>
+      </select>
+   </div>
       <!-- Email -->
-      <form class="form2" >
+      <div class="form2">
         <label for="Batch">Email</label>
-        <select name="languages" id="lang" [(ngModel)]="timesheet.email" name="email">
+        <select name="languages" id="lang" [(ngModel)]="timesheet.email" name="email" required #traineremail="ngModel" [class.is-invalid]="traineremail.invalid&&traineremail.touched">
           <option value={{useremail}}>{{useremail}}</option>
-          </select>
-        </form>
-
-    <!-- Name and Email Form -->
-    <!-- <div class="form-group">
-      <label for="exampleInputEmail1">Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1"  name="name" [(ngModel)]="timesheet.name" >
-    </div> -->
-  <!-- <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" value={{useremail}}  name="email" [(ngModel)]="timesheet.email">
-    </div> -->
-    <!-- Date Form -->
+        </select>
+      </div>
+    <!-- Date  -->
   <mat-form-field class="date">
       <label for="exampleInputEmail1">Date</label>
-      <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="timesheet.date" name="date" [min]="minDate" [max]="maxDate">
+      <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="timesheet.date" name="date" [min]="minDate" [max]="maxDate" required #date="ngModel">
       <mat-datepicker-toggle [for]="myDatepicker" matSuffix></mat-datepicker-toggle> 
       <mat-datepicker #myDatepicker></mat-datepicker>
     </mat-form-field>
     
     <!-- Batch Form -->
-    <form class="form2" >
+    <div class="form2">
       <label for="Batch">Batch</label>
-      <select name="languages" id="lang" [(ngModel)]="timesheet.batch" name="batch">
+      <select name="languages" id="lang" [(ngModel)]="timesheet.batch" name="batch" required #batch="ngModel" [class.is-invalid]="batch.invalid&&batch.touched">
         <option value="FSD">FSD</option>
         <option value="Data science">Data science</option>
         <option value="AI">AI</option>
       </select>
-      
-</form>
+    </div>
     <!-- Form session type -->
-    <form class="form2">
-      <label for="Session">Session</label>
-      <select name="languages" id="lang" [(ngModel)]="timesheet.session" name="session">
+   <div class="form2">
+    <label for="Session">Session</label>
+      <select name="languages" id="lang" [(ngModel)]="timesheet.session" name="session" required #session="ngModel" [class.is-invalid]="session.invalid&&session.touched">
         <option value="Virtual Session">Virtual Sesion</option>
         <option value="Physical Session">Physical Session</option>
         <option value="Lark doubt Session">Lark doubt session</option>
       </select>
-      
-</form>
-    <!-- Form total sessions -->
-  <form class="form2">
+   </div>
+    <!-- Form total hours -->
+   <div class="form2">
     <div class="form-group">
       <label for="Hours">Total Hours</label>
-      <input type="email" class="form-control" id="exampleInputhours"   name="hours" [(ngModel)]="timesheet.number">
+      <input type="email" class="form-control" id="exampleInputhours" required pattern="[0-9]"  name="hours" [(ngModel)]="timesheet.number" #hours="ngModel" [class.is-invalid]="hours.invalid&&hours.touched">
     </div> 
-  </form>
+   </div>
+   <!-- Submit -->
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    
   <button mat-button mat-dialog-close>Cancel</button>
-  <button  mat-button (click)="addtimesheet()" [mat-dialog-close]="true" cdkFocusInitial  >Submit</button>
+  <button  mat-button (click)="addtimesheet()" [mat-dialog-close]="true" cdkFocusInitial [disabled]="userdialog.form.invalid" >Submit</button>
 </mat-dialog-actions>
 </form>
