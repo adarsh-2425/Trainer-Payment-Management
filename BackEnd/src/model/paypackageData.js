@@ -9,7 +9,7 @@ const connectionParams={
 
 mongoose.connect(uri,connectionParams)
   .then( () => {
-      console.log('Connected to the User atlas database paypackages')
+      console.log('Connected to the paypackages database')
   })
   .catch( (err) => {
       console.error(`Error connecting to the database. n${err}`);

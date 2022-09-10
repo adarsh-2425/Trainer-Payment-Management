@@ -23,6 +23,8 @@ import { TrainerupdateComponent } from './trainer/trainerupdate/trainerupdate.co
 import { TrainernavbarComponent } from './trainer/trainernavbar/trainernavbar.component';
 import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
 import { PaypackageComponent } from './admin/paypackage/paypackage.component';
+import { ViewtimesheetComponent } from './admin/viewtimesheet/viewtimesheet.component';
+import { PaymentComponent } from './admin/payment/payment.component';
 
 
 
@@ -50,7 +52,9 @@ const routes: Routes = [
     {path : 'adminprofile' , component : AdminprofileComponent},
     {path: 'adminupdate' , component : AdminUpdateComponent},
     {path : 'admindashboard' , component : AdmindashboardComponent},
-    {path : 'paypackage' , component : PaypackageComponent}
+    {path : 'paypackage' , component : PaypackageComponent},
+    {path : 'viewtimesheet' , component:ViewtimesheetComponent},
+    {path : 'payment' , component:PaymentComponent},
   ]
 
  },

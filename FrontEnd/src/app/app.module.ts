@@ -46,6 +46,7 @@ import { AdmintrainerlistComponent } from './admin/admintrainerlist/admintrainer
 import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.component';
 import { PaypackageComponent } from './admin/paypackage/paypackage.component';
 import { PaymentComponent } from './admin/payment/payment.component';
+import { ViewtimesheetComponent } from './admin/viewtimesheet/viewtimesheet.component';
 
 
 
@@ -83,7 +84,8 @@ import { PaymentComponent } from './admin/payment/payment.component';
     AdmintrainerlistComponent,
     TrainerhomeComponent,
     PaypackageComponent,
-    PaymentComponent
+    PaymentComponent,
+    ViewtimesheetComponent
   ],
   imports: [
     BrowserModule,
