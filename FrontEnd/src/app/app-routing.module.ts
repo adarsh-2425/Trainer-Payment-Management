@@ -25,6 +25,8 @@ import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.componen
 import { PaypackageComponent } from './admin/paypackage/paypackage.component';
 import { ViewtimesheetComponent } from './admin/viewtimesheet/viewtimesheet.component';
 import { PaymentComponent } from './admin/payment/payment.component';
+import { AdmintrainerlistComponent } from './admin/admintrainerlist/admintrainerlist.component';
+import { PaymentTimesheetComponent } from './payment-timesheet/payment-timesheet.component';
 
 
 
@@ -41,14 +43,14 @@ const routes: Routes = [
   {path : 'signup' , component : SignupComponent},
   {path : 'login' , component : LoginComponent},
   {path : 'updateprofile' , component : UpdateProfileComponent},
-
+  {path :'paysheet', component:PaymentTimesheetComponent},
 
   {path : 'adminhome' ,   component : AdminhomeComponent,
   children : 
   [
     {path : 'admintimesheet' , component : AdmintimesheetComponent},
     {path :'adminnavbar' , component : AdminnavbarComponent},
-    {path : 'admintimesheet' , component : AdmintimesheetComponent},
+    {path : 'admintrainerlist', component:AdmintrainerlistComponent},
     {path : 'adminprofile' , component : AdminprofileComponent},
     {path: 'adminupdate' , component : AdminUpdateComponent},
     {path : 'admindashboard' , component : AdmindashboardComponent},
