@@ -47,6 +47,7 @@ import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.componen
 import { PaypackageComponent } from './admin/paypackage/paypackage.component';
 import { PaymentComponent } from './admin/payment/payment.component';
 import { ViewtimesheetComponent } from './admin/viewtimesheet/viewtimesheet.component';
+import { PaymentTimesheetComponent } from './payment-timesheet/payment-timesheet.component';
 import { FinancetimesheetComponent } from './finance/financetimesheet/financetimesheet.component';
 
 
@@ -87,6 +88,7 @@ import { FinancetimesheetComponent } from './finance/financetimesheet/financetim
     PaypackageComponent,
     PaymentComponent,
     ViewtimesheetComponent,
+    PaymentTimesheetComponent,
     FinancetimesheetComponent
   ],
   imports: [
@@ -107,7 +109,7 @@ import { FinancetimesheetComponent } from './finance/financetimesheet/financetim
     
     
   ],
-  providers: [AuthGuard, AuthService,DialogComponent],
+  providers: [AuthGuard, AuthService,DialogComponent,AdmintrainerlistComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

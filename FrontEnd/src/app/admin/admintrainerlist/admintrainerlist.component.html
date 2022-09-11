@@ -1,0 +1,30 @@
+<div class="card">
+    <!-- <div class="card-header">
+    </div> -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Trainer Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let trainer of trainerData">
+                        <td>{{trainer.First_Name}}</td>
+                        <td>{{trainer.Email}}</td>
+    
+                        <td>
+                            <button class="btn btn-primary" style="cursor:pointer"  style="margin-right:10px" >VIEW TIMESHEET</button>
+                            <button class="btn btn-warning" style="cursor:pointer"  style="margin-right:10px" >PAYMENT REPORT</button>
+                            
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
