@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <h2>PAY PACKAGES</h2>          
+    <table class="table table-bordered  table-striped bg-info"
+      *ngIf='paypackages && paypackages.length'>
+        <thead>
+        <tr>
+          <th>Program</th>
+          <th>Category</th>
+          <th>SubCategory</th>
+          <th>Mode</th>
+          <th>Duration</th>
+          <th>ParticipantCount</th>
+          <th>OtherActivities</th>
+          <th>Pay</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let paypackage of paypackages'>
+        <td>{{paypackage.Program}}</td>
+        <td>{{paypackage.Category}}</td>
+        <td>{{paypackage.SubCategory}}</td>
+        <td>{{paypackage.Mode}}</td>
+        <td>{{paypackage.Duration}}</td>
+        <td>{{paypackage.ParticipantCount}}</td>
+        <td>{{paypackage.OtherActivities}}</td>
+        <td>{{paypackage.Pay}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

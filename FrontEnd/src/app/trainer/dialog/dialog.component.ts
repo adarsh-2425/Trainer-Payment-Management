@@ -3,6 +3,7 @@ import { timesheetmodel } from '../timesheet/timesheet';
 import { HttpClient } from '@angular/common/http';
 import { TimesheetService } from 'src/app/timesheet.service';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -24,10 +25,7 @@ export class DialogComponent implements OnInit {
  username :string = JSON.parse(JSON.stringify(localStorage.getItem('name')))
  useremail: string = JSON.parse(JSON.stringify(localStorage.getItem('email')))
  
-
-  
- 
-  constructor(private http : HttpClient, private _timesheet : TimesheetService,
+  constructor(private http : HttpClient, private _timesheet : TimesheetService, private route :ActivatedRoute,
     private router :Router) { }
 
   ngOnInit(): void {
@@ -38,9 +36,11 @@ export class DialogComponent implements OnInit {
   addtimesheet(){
    
    console.log(this.timesheet)
-   this._timesheet.sendTimesheet(this.timesheet).subscribe();
-   alert('Timesheet Added')
-   this.router.navigateByUrl('/timesheet')
+   this._timesheet.sendTimesheet(this.timesheet).subscribe(()=>{
+    alert('Timesheet Added')
+    this.router.navigate(['./timesheet'],{relativeTo:this.route })
+   });
+   
 
   }
 }
