@@ -2,19 +2,10 @@
 <br>
 <br>
 
-<div class="container mt-3 p-5" >
-<div class="card mx-auto mt-4" >
-<div class="card-header  bg-info">
-
-<br>
-<br>
-<div class="card-header">
-
-    <h3 style="text-align: center;"> Login</h3>
+<div class="card mx-auto mt-4" style="width: 480px;" >
+  <h4 class="card-header text-center bg-info">Login</h4>
+  <div class="card-body" >
   
-  </div>
-  
-  <div class="class-body">
     <p [ngClass]="messageClass">{{message}}</p>
    <form  (ngSubmit)="userverify()"class="form col-md-6" #userLogin ="ngForm">
     <div class="form-group" >
@@ -54,16 +45,17 @@
     <button type="submit" class="btn btn-primary" [disabled]="userLogin.form.invalid" >Confirm Identity</button> 
     <br>
     <br>
-    <a routerLink="/signup"><div class="text-left"> Forgot Password?</div></a>
-   <a routerLink="/signup"><div class="text-left">Create An Account</div> </a>
+    <a routerLink="/signup"><div class="text-left">Create Account</div></a>
+   <br>
   </form>
   </div>
   </div>
-  </div>
+
   <!-- <div class="alert" *ngIf="serverErrorMessages">
     {{serverErrorMessages}}
   </div> -->
-  </div>
+
+
   <br>
   <app-footer></app-footer>
    
