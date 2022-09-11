@@ -1,11 +1,10 @@
 const express = require('express');
 const UserData = require('./src/model/userData.js')
-const TrainerData = require('./src/model/Trainerdata')
+const Trainerdata = require('./src/model/Trainerdata')
 const PaypackageData = require('./src/model/paypackageData');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 var bodyparser=require('body-parser');
-const Trainerdata = require('./src/model/Trainerdata');
 var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
@@ -113,6 +112,8 @@ app.post('/login', (req,res) => {
   })
 })
 
+
+
 //Add Timesheet
 app.post("/addtimesheet", (req,res)=>{
   
@@ -173,6 +174,10 @@ app.get('/:id',  (req, res) => {
         console.log('past server');
     });
 })
+
+
+
+
 
 // Profile info update
 app.put('/updateProfile',(req,res)=>{

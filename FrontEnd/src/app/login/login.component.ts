@@ -36,12 +36,14 @@ export class LoginComponent implements OnInit {
               
               // setting token, email, name in the localstorage of frontend
               localStorage.setItem('token',res.token)
-              localStorage.setItem('email',res.email)
               localStorage.setItem('name',res.name)
               // localStorage.setItem('id',res.id)
               let userId = res.id;
+              let email = res.email;
 
               localStorage.setItem('userId',userId.toString());
+              localStorage.setItem('email',email.toString());
+
              
               
               
