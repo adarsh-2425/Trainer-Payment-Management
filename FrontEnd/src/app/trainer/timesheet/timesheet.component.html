@@ -11,23 +11,20 @@
     <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
           <th scope="col">Date</th>
           <th scope="col">Batch</th>
           <th scope="col">Program</th>
-          <th scope="col">Sessions</th>
+          <th scope="col">Hours</th>
         </tr>
     </thead>
     <tbody>
-        <tr >
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ok</td>
+        <tr *ngFor="let user of userData">
+            <th scope="row"></th>
+            <td>{{user.Date}}</td>
+            <td>{{user.Batch}}</td>
+            <td>{{user.Program}}</td>
+            <td>{{user.Sessions}}</td>
+            <td><button  class="btn btn-danger" (click)="deleteTimesheet(user)">Delete</button></td>
           </tr>
     </tbody>
 </table>

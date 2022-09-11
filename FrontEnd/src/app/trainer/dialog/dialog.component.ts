@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { timesheetmodel } from '../timesheet/timesheet';  
 import { HttpClient } from '@angular/common/http';
 import { TimesheetService } from 'src/app/timesheet.service';
+import { Router } from '@angular/router';
 
 
 
@@ -26,7 +27,8 @@ export class DialogComponent implements OnInit {
 
   
  
-  constructor(private http : HttpClient, private _timesheet : TimesheetService) { }
+  constructor(private http : HttpClient, private _timesheet : TimesheetService,
+    private router :Router) { }
 
   ngOnInit(): void {
    console.log(this.username)
@@ -37,7 +39,8 @@ export class DialogComponent implements OnInit {
    
    console.log(this.timesheet)
    this._timesheet.sendTimesheet(this.timesheet).subscribe();
-   
+   alert('Timesheet Added')
+   this.router.navigateByUrl('/timesheet')
 
   }
 }
