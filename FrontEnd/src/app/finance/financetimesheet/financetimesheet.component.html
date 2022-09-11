@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">View PDF</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pdf of pdfs">
+                
+                <td>{{pdf.Name}}</td>
+                <td>{{pdf.Email}}</td>
+                <td>{{pdf.pdf}}</td>
+                
+              </tr>
+        </tbody>
+    </table>
+</div>

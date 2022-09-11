@@ -24,6 +24,10 @@ export class TimesheetService {
     return this.http.post<any>("http://localhost:3000/gettimesheet", data)
   }
 
+  timesheetpdf(){
+    return this.http.get("http://localhost:3000/timesheet")
+  }
+
   
 }
 

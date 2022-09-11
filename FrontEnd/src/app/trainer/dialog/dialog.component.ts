@@ -38,7 +38,8 @@ export class DialogComponent implements OnInit {
    console.log(this.timesheet)
    this._timesheet.sendTimesheet(this.timesheet).subscribe(()=>{
     alert('Timesheet Added')
-    this.router.navigate(['./timesheet'],{relativeTo:this.route })
+    window.location.reload();
+    // this.router.navigate(['./timesheet'],{relativeTo:this.route })
    });
    
 

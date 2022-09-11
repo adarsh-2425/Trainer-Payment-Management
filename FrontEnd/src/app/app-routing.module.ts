@@ -25,6 +25,7 @@ import { TrainerhomeComponent } from './trainer/trainerhome/trainerhome.componen
 import { PaypackageComponent } from './admin/paypackage/paypackage.component';
 import { ViewtimesheetComponent } from './admin/viewtimesheet/viewtimesheet.component';
 import { PaymentComponent } from './admin/payment/payment.component';
+import { FinancetimesheetComponent } from './finance/financetimesheet/financetimesheet.component';
 
 
 
@@ -75,7 +76,8 @@ const routes: Routes = [
   [
     {path:'financenavbar', component : FinancenavbarComponent},
     {path : 'financeupdate', component : FinanceupdateComponent},
-    {path : 'financedashboard', component : FinancedashboardComponent}
+    {path : 'financedashboard', component : FinancedashboardComponent},
+    {path : 'financetimesheet' , component : FinancetimesheetComponent}
   ]}
 
 
